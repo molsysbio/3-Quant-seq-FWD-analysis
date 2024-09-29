@@ -1,0 +1,6 @@
+channels:
+  - bioconda
+  - conda-forge
+  - nodefaults
+dependencies:
+  - fastqc=0.12.1

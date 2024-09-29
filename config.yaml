@@ -1,0 +1,33 @@
+# --- OUTPUT -------------------------------------------------------------------
+# specify the file names for the count matrix and the summary library sizes file
+count_matrix: count_matrix.tsv
+library_sizes: library_sizes.tsv
+# (files are saved as tab-delimited files)
+
+# --- INPUT --------------------------------------------------------------------
+# path to fastq files (needs to include trailing slash)
+fastq_dir: /data/cephfs-1/home/users/steinbrd_c/work/projects/example_fastq_quant-seq/
+# fastq_dir: /data/cephfs-2/unmirrored/groups/bluethgen/opto_varying_sustain_intervals_fastq/
+
+# path to precomputed STAR genomes
+star_sjdb_50: /data/cephfs-1/work/projects/cubit/18.12/static_data/precomputed/STAR/2.7.3a/GENCODE/25/GRCh38/p7/50
+star_sjdb_75: /data/cephfs-1/work/projects/cubit/18.12/static_data/precomputed/STAR/2.7.3a/GENCODE/25/GRCh38/p7/75
+star_sjdb_100: /data/cephfs-1/work/projects/cubit/18.12/static_data/precomputed/STAR/2.7.3a/GENCODE/25/GRCh38/p7/100
+star_sjdb_150: /data/cephfs-1/work/projects/cubit/18.12/static_data/precomputed/STAR/2.7.3a/GENCODE/25/GRCh38/p7/150
+# --> select sjdb overhang based on read length of sequencing data
+
+# directory to store temporary files
+tmp: "$HOME/scratch/"
+
+# path where some databses and annotations are stored
+helper_files: helper_files/
+
+
+# --- PARAMETERS ---------------------------------------------------------------
+# on which feature level do you want to quantify with subread's featureCounts?
+subread_features: gene
+# options are:  gene, transcript, exon
+
+# length of the UMI + spacer to extract the correct UMIs (used in "extract_umis" rule)
+bc_pattern: NNNNNNNNNN
+# in most cases this is 6 bp UMI + 4 bp spacer (TATA) --> length 10 --> NNNNNNNNNN

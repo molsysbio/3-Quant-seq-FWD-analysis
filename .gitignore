@@ -1,0 +1,9 @@
+.snakemake/**
+.test/**
+todo_list.txt
+logs/**
+alignment/**
+subread/**
+count_matrix*
+library_*
+._*

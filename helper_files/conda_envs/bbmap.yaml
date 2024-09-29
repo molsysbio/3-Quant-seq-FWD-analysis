@@ -1,0 +1,6 @@
+channels:
+  - bioconda
+  - conda-forge
+  - nodefaults
+dependencies:
+  - bbmap=39.01

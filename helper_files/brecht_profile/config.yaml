@@ -1,0 +1,27 @@
+cluster:
+  mkdir -p logs/{rule} &&
+  sbatch
+    --cpus-per-task={threads}
+    --time={resources.time}
+    --mem={resources.mem_mb}
+    --job-name=smk-{rule}-{wildcards}
+    --output=logs/{rule}/{rule}-{wildcards}-%j.out
+    --parsable
+jobscript: "slurm-jobscript.sh"
+# cluster-status: "status-sacct-robust.sh"
+cluster-status: "status-sacct.sh"
+cluster-cancel: "scancel"
+max-jobs-per-second: 20
+max-status-checks-per-second: 2
+restart-times: 1
+local-cores: 1
+latency-wait: 60
+keep-going: True
+rerun-incomplete: True
+printshellcmds: True
+scheduler: greedy
+use-conda: True
+default-resources:
+  - time='0-04:00:00'
+  - mem_mb=16000
+  - disk_mb=1000000

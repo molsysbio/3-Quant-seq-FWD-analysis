@@ -1,0 +1,8 @@
+channels:
+  - bioconda
+  - conda-forge
+  - nodefaults
+dependencies:
+  - umi_tools=1.1.4=py310h4b81fae_2
+  - libdeflate=1.18=h0b41bf4_0
+  - pysam=0.21.0=py310h41dec4a_1
