@@ -5,6 +5,8 @@ This snakemake-based pipeline is specific for QuantSeq FWD libraries that contai
 
 To get started, you only need to provide a file path where all the fastq files from the 3' Quant-seq experiment are stored. The pipeline then automatically selects all forward read files by filtering for `*_R1_001.fastq.gz`. This catches all relevant files if you demultiplexed your data with bcl2fastq. If you renamed the fastq files, you can change the filtering behaviour in line 20 in the Snakefile.
 
+The folder `example_fastq_quant-seq` contains three fastq files with only 5000 reads from a 3' Quant-seq FWD UMI experiment. To start a test run, the filepaths can be left as is. Running the whole pipeline on the example data should take only ~5 minutes. Installing the conda enviroments can take much longer though.
+
 ## Prerequisites
 
 ### 1. Conda and Snakemake Installation
