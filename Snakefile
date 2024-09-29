@@ -111,7 +111,7 @@ rule extract_umis:
         tmp=TMP,
         bc_pattern=config['bc_pattern'],
     conda:
-        "helper_files/conda_envs/umitools.yaml"
+        "helper_files/conda_envs/umitools_v2.yaml"
     shell:
         r"""
         mkdir -p alignment/extracted/logs/
@@ -211,7 +211,7 @@ rule dedup_umis:
     params:
         tmp=TMP,
     conda:
-        "helper_files/conda_envs/umitools.yaml"
+        "helper_files/conda_envs/umitools_v2.yaml"
     shell:
         r"""
         umi_tools dedup \

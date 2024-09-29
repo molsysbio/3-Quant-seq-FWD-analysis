@@ -6,8 +6,7 @@ library_sizes: library_sizes.tsv
 
 # --- INPUT --------------------------------------------------------------------
 # path to fastq files (needs to include trailing slash)
-fastq_dir: /data/cephfs-1/home/users/steinbrd_c/work/projects/example_fastq_quant-seq/
-# fastq_dir: /data/cephfs-2/unmirrored/groups/bluethgen/opto_varying_sustain_intervals_fastq/
+fastq_dir: example_fastq_quant-seq/
 
 # path to precomputed STAR genomes
 star_sjdb_50: /data/cephfs-1/work/projects/cubit/18.12/static_data/precomputed/STAR/2.7.3a/GENCODE/25/GRCh38/p7/50
