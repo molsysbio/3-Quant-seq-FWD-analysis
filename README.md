@@ -24,7 +24,7 @@ conda config --set channel_priority flexible
 
 ### 2. STAR Precomputed Genomes
 
-The pipeline requires precomputed STAR genome indices. These should be provided in the configuration file (`config.yaml`). To generate a STAR genome index, you need a genome fasta file and the corresponding annotation GTF file (e.g. provided by [GENCODE](https://www.gencodegenes.org/human/release_46.html)). The following command generates a STAR index. Make sure the STAR version is *2.7.1a*.
+The pipeline requires precomputed STAR genome indices. These should be provided in the configuration file (`config.yaml`). To generate a STAR genome index, you need a genome fasta file and the corresponding annotation GTF file (e.g. provided by [GENCODE](https://www.gencodegenes.org/human/release_46.html)). Replace `/path/to/STAR_INDEX/` with the location you want your new STAR index to be. Replace `/path/to/genome.fa` with the path to the genome fasta file. Replace `/path/to/annotation.gtf` with the path to the annotation GTF file. The following command generates a STAR index. Make sure the STAR version is *2.7.1a*.
 
 ```bash
 STAR --runMode genomeGenerate --genomeDir /path/to/STAR_INDEX/ --genomeFastaFiles /path/to/genome.fa --sjdbGTFfile /path/to/annotation.gtf --sjdbOverhang 75 --runThreadN 16 --limitGenomeGenerateRAM 100000000000
