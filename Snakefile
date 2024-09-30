@@ -23,9 +23,9 @@ configfile: "config.yaml"
 # bbduk needs reference fa files
 ADAPTER_SEQUENCES = os.path.join(config['helper_files'], 'adapters_for_bbduk/')
 # here, STAR genome is already precomputed (check for spdjOverhang)
-STAR_X = config['star_sjdb_50']
+STAR_X = config['star_sjdb_75']
 # featureCounts needs the GTF file (same one as used for generating STAR genome)
-GTF = os.path.join(config['star_sjdb_50'], 'annotation.gtf')
+GTF = os.path.join(config['star_sjdb_75'], 'annotation.gtf')
 
 # expand temporary file path
 TMP = os.path.expandvars(config['tmp'])
